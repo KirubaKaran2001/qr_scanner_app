@@ -58,10 +58,10 @@ class _QrScannerState extends State<QrScanner> {
       key: qrKey,
       overlay: QrScannerOverlayShape(
         borderColor: const Color(0xFFE1C884)),
-      onQRViewCreated: onQRViewCreated,
+      onQRViewCreated: qrCreated,
     );
   }
-  onQRViewCreated(QRViewController controller) {
+  qrCreated(QRViewController controller) {
     setState(() {
       this.controller = controller;
     });
